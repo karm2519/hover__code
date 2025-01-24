@@ -3,6 +3,7 @@ const image = document.getElementsByTagName("p")[0];
 canvas.width = canvas.clientWidth;
 canvas.height = canvas.clientHeight;
 
+
 const params = {
   SIM_RESOLUTION: 128,
   DYE_RESOLUTION: 1024,
@@ -326,6 +327,15 @@ function render() {
     blit(pressure.write());
     pressure.swap();
   }
+  document.querySelectorAll('.hoverable').forEach((el) => {
+    el.addEventListener('touchstart', () => {
+      el.classList.add('hover');
+    });
+    el.addEventListener('touchend', () => {
+      el.classList.remove('hover');
+    });
+  });
+  
 
   gl.useProgram(gradientSubtractProgram.program);
   gl.uniform2f(
