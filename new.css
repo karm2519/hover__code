@@ -3,8 +3,25 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  background-color: rgba(255, 0, 102, 0.693);
+  background-color: rgba(234, 12, 101, 0.785);
 }
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+    bottom: 40%;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  #container {
+    width: 50vw;
+    left: 25%;
+  }
+  .left, .right {
+    height: 18vw;
+  }
+}
+
 
 canvas {
   position: fixed;
@@ -61,7 +78,7 @@ canvas {
   width: 60%;
   height: 80%;
   justify-content: center;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-left: 20%;
   font-family: cursive;
   font-weight: 900;
