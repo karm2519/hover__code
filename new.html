@@ -30,7 +30,15 @@
     </div>
     <h3>Swipe on screen to see the Secert Message</h3>
     <canvas></canvas>
-
+    <script>
+      // Add a hover effect for mobile devices
+      const heading = document.querySelector('h1');
+      heading.addEventListener('click', () => {
+        heading.classList.add('hover');
+        setTimeout(() => heading.classList.remove('hover'), 1000); // Remove the hover after 1 second
+      });
+    </script>
+    
     <script type="x-shader/x-fragment" id="vertShader">
       precision highp float;
 
